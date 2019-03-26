@@ -13,7 +13,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 http://www.mulesoft.org/schema/mule/email http://www.mulesoft.org/schema/mule/email/current/mule-email.xsd
 http://www.mulesoft.org/schema/mule/s3 http://www.mulesoft.org/schema/mule/s3/current/mule-s3.xsd">
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="77d50dbb-a93f-4127-8996-21118c2c5dba" >
-		<http:listener-connection host="0.0.0.0" port="8082" />
+		<http:listener-connection host="0.0.0.0" port="${http.port}" />
 	</http:listener-config>
 	<flow name="examafterFlow" doc:id="555ccac4-9084-43ee-9ec1-990e2ab1a4ae" >
 		<http:listener doc:name="Listener" doc:id="4f67067d-ea6f-41a8-951f-84ff412d48a5" path="/examtest" config-ref="HTTP_Listener_config"/>
